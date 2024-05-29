@@ -8,6 +8,7 @@ source("modules/module-kalkulator.R")
 source("modules/module-faq.R")
 source("modules/module-peraturan.R")
 source("modules/module-berita.R")
+source("modules/module-dashboard.R")
 
 ui <- navbarPage(
   ### Title
@@ -39,7 +40,7 @@ ui <- navbarPage(
   ### Dashboard
   nav_panel(
     title = div(bs_icon("speedometer2"), "Dashboard"),
-    #TODO
+    module_dashboard("dashboard")
   ),
   nav_menu(
     title = "Informasi",
@@ -50,10 +51,6 @@ ui <- navbarPage(
     nav_panel(
       title = "Berita",
       module_berita("berita")
-    ),
-    nav_panel(
-      title = "Kurs",
-      #TODO
     ),
   ),
   nav_panel(
@@ -69,6 +66,7 @@ server <- function(input, output, session) {
   server_faq("faq")
   server_peraturan("peraturan")
   server_berita("berita")
+  server_dashboard("dashboard")
 }
 
 shinyApp(ui, server)

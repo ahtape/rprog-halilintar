@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Template file
+modules/module-.R

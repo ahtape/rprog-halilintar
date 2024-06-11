@@ -8,6 +8,7 @@ source("modules/module-kalkulator.R")
 source("modules/module-faq.R")
 source("modules/module-peraturan.R")
 source("modules/module-berita.R")
+source("modules/module-kurs.R")
 source("modules/module-dashboard.R")
 
 ui <- navbarPage(
@@ -52,6 +53,10 @@ ui <- navbarPage(
       title = "Berita",
       module_berita("berita")
     ),
+    nav_panel(
+      title = "kurs",
+      module_kurs("Kurs")
+    ),
   ),
   nav_panel(
     title = div(bs_icon("question-circle-fill"), "FAQ"),
@@ -66,6 +71,7 @@ server <- function(input, output, session) {
   server_faq("faq")
   server_peraturan("peraturan")
   server_berita("berita")
+  server_kurs("kurs")
   server_dashboard("dashboard")
 }
 

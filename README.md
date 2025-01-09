@@ -1,6 +1,6 @@
 # Running the App
 
-The app can be opened on https://halilintar-image-qhhdfcjcrq-et.a.run.app/
+~~The app can be opened on https://halilintar-image-qhhdfcjcrq-et.a.run.app/~~
 
 ## Running Locally
 ### Prerequisite
